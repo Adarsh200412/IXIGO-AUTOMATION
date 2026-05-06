@@ -1,0 +1,9 @@
+{
+  "default": {
+    "features": "tests/features/**/*.feature",
+    "require": ["tests/helpers/**/*.js", "tests/steps/**/*.js"],
+    "format": ["progress", "html:test-results/report.html"],
+    "publishQuiet": true,
+    "timeout": 30000
+  }
+}
