@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test":"npx cucumber-js tests/features",
+    "setup": "node setup/login.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
