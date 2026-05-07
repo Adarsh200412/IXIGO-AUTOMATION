@@ -19,7 +19,7 @@ BeforeAll(async function () {
 
 Before(async function () {
   this.context = await browser.newContext({
-    storageState: path.resolve(__dirname, "../../../JSONFiles/state.json"),
+    storageState: path.resolve(__dirname, "../../JSONFiles/state.json"),
   });
 
   this.page = await this.context.newPage();
