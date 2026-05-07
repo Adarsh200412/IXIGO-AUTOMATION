@@ -1,0 +1,424 @@
+|-- .github
+    |-- workflows
+        |-- playwright.yml
+|-- .gitignore
+|-- cucumber.json
+|-- ixigo-user-data
+    |-- BrowserMetrics
+        |-- BrowserMetrics-69FB09A4-55AC.pma
+    |-- component_crx_cache
+    |-- Crashpad
+        |-- attachments
+        |-- reports
+        |-- settings.dat
+    |-- Default
+        |-- Account Web Data
+        |-- Account Web Data-journal
+        |-- Affiliation Database
+        |-- Affiliation Database-journal
+        |-- blob_storage
+            |-- 96a33dcb-f93e-4f11-8c13-d87ad8dc0ba9
+        |-- Cache
+            |-- Cache_Data
+                |-- data_0
+                |-- data_1
+                |-- data_2
+                |-- data_3
+                |-- f_000002
+                |-- f_000003
+                |-- f_000004
+                |-- f_000008
+                |-- f_000009
+                |-- f_00000a
+                |-- f_00000b
+                |-- f_00000c
+                |-- f_00000d
+                |-- f_00000e
+                |-- f_00000f
+                |-- f_000010
+                |-- f_000011
+                |-- f_000012
+                |-- f_000013
+                |-- f_000014
+                |-- f_000015
+                |-- f_000016
+                |-- f_000017
+                |-- f_000018
+                |-- f_000019
+                |-- f_00001a
+                |-- f_00001b
+                |-- f_00001c
+                |-- f_00001d
+                |-- f_00001e
+                |-- index
+            |-- No_Vary_Search
+                |-- journal.baj
+                |-- snapshot.baf
+        |-- chrome_cart_db
+            |-- LOCK
+            |-- LOG
+        |-- ClientCertificates
+            |-- LOCK
+            |-- LOG
+        |-- Code Cache
+            |-- js
+                |-- 00e2d004e58c379b_0
+                |-- 02eb61e76bcfce0b_0
+                |-- 0769364fadad0b19_0
+                |-- 0a1ff631256ef276_0
+                |-- 0c368e99e5fb35d0_0
+                |-- 0eac4709f6def5b2_0
+                |-- 14c136fb15b00c5a_0
+                |-- 15d513a5667e942a_0
+                |-- 18904a39ea9aff5b_0
+                |-- 1ee612be89f0d120_0
+                |-- 210ed2460025f064_0
+                |-- 22f51eb3e486b2ea_0
+                |-- 35d1569a28e47d1b_0
+                |-- 3881c476d94224c3_0
+                |-- 441fa95570d2a2cc_0
+                |-- 4f3f8eb8c357e372_0
+                |-- 580ab49b2f09774f_0
+                |-- 5e6334cb02b701e9_0
+                |-- 6066f02444880807_0
+                |-- 6c152c895ccdcf92_0
+                |-- 6e1ca2e3ac1f4c0e_0
+                |-- 77ab7201974690ec_0
+                |-- 7e7a7d67230a873b_0
+                |-- 7fea7daff3a671d6_0
+                |-- 85bcad1640d45c29_0
+                |-- 87d2fa5d475fd9da_0
+                |-- 8b6f1a030ea05b0c_0
+                |-- 8e07c098037bcd1b_0
+                |-- 9460de815633bcad_0
+                |-- 990db2c4587e54b2_0
+                |-- 9f7365de493600aa_0
+                |-- a5b40d82a73b13c0_0
+                |-- aaf167eb672f3b2f_0
+                |-- b316d135c21b03d3_0
+                |-- b8dabb783ca91758_0
+                |-- ba247626bcc7845b_0
+                |-- c35360435df2e3db_0
+                |-- c4f40f68725f4aef_0
+                |-- c89470eb7a7216da_0
+                |-- c9863cc4de799f85_0
+                |-- cc3d6813d100a941_0
+                |-- cff0342ba1316548_0
+                |-- d05f8acc99fec421_0
+                |-- e2d20c55df13ae4a_0
+                |-- f490731b5c0f31c1_0
+                |-- index
+                |-- index-dir
+                    |-- the-real-index
+            |-- wasm
+                |-- index
+                |-- index-dir
+                    |-- the-real-index
+        |-- commerce_subscription_db
+            |-- LOCK
+            |-- LOG
+        |-- DawnGraphiteCache
+            |-- data_0
+            |-- data_1
+            |-- data_2
+            |-- data_3
+            |-- index
+        |-- DawnWebGPUCache
+            |-- data_0
+            |-- data_1
+            |-- data_2
+            |-- data_3
+            |-- index
+        |-- discounts_db
+            |-- LOCK
+            |-- LOG
+        |-- discount_infos_db
+            |-- LOCK
+            |-- LOG
+        |-- Extension Rules
+            |-- 000003.log
+            |-- CURRENT
+            |-- LOCK
+            |-- LOG
+            |-- MANIFEST-000001
+        |-- Extension Scripts
+            |-- 000003.log
+            |-- CURRENT
+            |-- LOCK
+            |-- LOG
+            |-- MANIFEST-000001
+        |-- Extension State
+            |-- 000003.log
+            |-- CURRENT
+            |-- LOCK
+            |-- LOG
+            |-- MANIFEST-000001
+        |-- Favicons
+        |-- Favicons-journal
+        |-- GPUCache
+            |-- data_0
+            |-- data_1
+            |-- data_2
+            |-- data_3
+            |-- index
+        |-- History
+        |-- History-journal
+        |-- Local Storage
+            |-- leveldb
+                |-- 000003.log
+                |-- CURRENT
+                |-- LOCK
+                |-- LOG
+                |-- MANIFEST-000001
+        |-- LOCK
+        |-- LOG
+        |-- Login Data
+        |-- Login Data For Account
+        |-- Login Data For Account-journal
+        |-- Login Data-journal
+        |-- Network
+            |-- Cookies
+            |-- Cookies-journal
+            |-- Device Bound Sessions
+            |-- Device Bound Sessions-journal
+            |-- Network Persistent State
+            |-- NetworkDataMigrated
+            |-- Reporting and NEL
+            |-- Reporting and NEL-journal
+            |-- SCT Auditing Pending Reports
+            |-- TransportSecurity
+            |-- Trust Tokens
+            |-- Trust Tokens-journal
+        |-- parcel_tracking_db
+            |-- LOCK
+            |-- LOG
+        |-- PersistentOriginTrials
+            |-- LOCK
+            |-- LOG
+        |-- Preferences
+        |-- README
+        |-- Safe Browsing Network
+            |-- NetworkDataMigrated
+            |-- Safe Browsing Cookies
+            |-- Safe Browsing Cookies-journal
+        |-- Secure Preferences
+        |-- Segmentation Platform
+            |-- SegmentInfoDB
+                |-- LOCK
+                |-- LOG
+            |-- SignalDB
+                |-- LOCK
+                |-- LOG
+            |-- SignalStorageConfigDB
+                |-- LOCK
+                |-- LOG
+        |-- ServerCertificate
+        |-- ServerCertificate-journal
+        |-- Service Worker
+            |-- CacheStorage
+                |-- 404cdbe3e01e945f5ee887c2f6f65aca8497e32c
+                    |-- ba4bbc63-ec01-4bbd-9a5e-0292cc8d81c4
+                        |-- 089620661ffb515c_0
+                        |-- 089620661ffb515c_1
+                        |-- 092e38bf8809af1b_0
+                        |-- 092e38bf8809af1b_1
+                        |-- 099a55eaeff4b929_0
+                        |-- 0cf317640a222178_0
+                        |-- 0cf317640a222178_1
+                        |-- 10b4b19ce6d55101_0
+                        |-- 10b4b19ce6d55101_1
+                        |-- 133408096e5b93cd_0
+                        |-- 133408096e5b93cd_1
+                        |-- 15c7ea2bb4899e09_0
+                        |-- 15c7ea2bb4899e09_1
+                        |-- 164c42ae863b2fa8_0
+                        |-- 164c42ae863b2fa8_1
+                        |-- 17d0273e4069d8ec_0
+                        |-- 17d0273e4069d8ec_1
+                        |-- 182a393f8a954871_0
+                        |-- 182a393f8a954871_1
+                        |-- 186bd6bb97b4d046_0
+                        |-- 186bd6bb97b4d046_1
+                        |-- 1cbd9cd41908fec7_0
+                        |-- 1cbd9cd41908fec7_1
+                        |-- 336bb66d99cbda9b_0
+                        |-- 34fbfd65fb759de7_0
+                        |-- 34fbfd65fb759de7_1
+                        |-- 35fb8c7a5bfc2306_0
+                        |-- 36616222fac6f102_0
+                        |-- 36616222fac6f102_1
+                        |-- 395fa7775ab4d72c_0
+                        |-- 395fa7775ab4d72c_1
+                        |-- 43e49670d88ef21d_0
+                        |-- 481c21f7105322a3_0
+                        |-- 48aed5527a69a3d6_0
+                        |-- 48aed5527a69a3d6_1
+                        |-- 5161b58459aa469b_0
+                        |-- 5161b58459aa469b_1
+                        |-- 59ec1b1e532755b3_0
+                        |-- 59ec1b1e532755b3_1
+                        |-- 5dc2409dd68fedb3_0
+                        |-- 5dc2409dd68fedb3_1
+                        |-- 5e56c2e2dc7aff67_0
+                        |-- 5e56c2e2dc7aff67_1
+                        |-- 67347514f75e9377_0
+                        |-- 67347514f75e9377_1
+                        |-- 6e50318dff4d8cbf_0
+                        |-- 6e50318dff4d8cbf_1
+                        |-- 721cf5f1d6c618b6_0
+                        |-- 721cf5f1d6c618b6_1
+                        |-- 7a91a66967642ad5_0
+                        |-- 7a91a66967642ad5_1
+                        |-- 7c0bf79a44db352a_0
+                        |-- 7c1c06162303d8fa_0
+                        |-- 7c1c06162303d8fa_1
+                        |-- 88bb742d37ec6157_0
+                        |-- 88bb742d37ec6157_1
+                        |-- 91e0e06ba60aec18_0
+                        |-- 91e0e06ba60aec18_1
+                        |-- 9ddbe2ac36c86d09_0
+                        |-- 9ddbe2ac36c86d09_1
+                        |-- a1e790d27bd06a03_0
+                        |-- a1e790d27bd06a03_1
+                        |-- a48c6a8b553b947e_0
+                        |-- a48c6a8b553b947e_1
+                        |-- a6be1b0aa90fabd9_0
+                        |-- a6be1b0aa90fabd9_1
+                        |-- a900843ca617f9fc_0
+                        |-- a900843ca617f9fc_1
+                        |-- afa63d625c15b083_0
+                        |-- afa63d625c15b083_1
+                        |-- ba6a1fe833505c64_0
+                        |-- c242c74d6848386c_0
+                        |-- c242c74d6848386c_1
+                        |-- c7b21bcccfe1b670_0
+                        |-- c7b21bcccfe1b670_1
+                        |-- d0c39514e9b3aacc_0
+                        |-- d0c39514e9b3aacc_1
+                        |-- d7dd5ffa93a2faac_0
+                        |-- d7dd5ffa93a2faac_1
+                        |-- db32f67253a97d3b_0
+                        |-- db32f67253a97d3b_1
+                        |-- df25cb91f3056316_0
+                        |-- df25cb91f3056316_1
+                        |-- e144b156075f5a50_0
+                        |-- e144b156075f5a50_1
+                        |-- e676335f3a06cf83_0
+                        |-- e676335f3a06cf83_1
+                        |-- f09d5d4ed9e56a01_0
+                        |-- f09d5d4ed9e56a01_1
+                        |-- f2bd57b2aa4339ca_0
+                        |-- f916b8bc32b73b3c_0
+                        |-- ff8016f1fb9ffb95_0
+                        |-- ff8016f1fb9ffb95_1
+                        |-- index
+                        |-- index-dir
+                            |-- the-real-index
+                    |-- index.txt
+            |-- Database
+                |-- 000003.log
+                |-- CURRENT
+                |-- LOCK
+                |-- LOG
+                |-- MANIFEST-000001
+            |-- ScriptCache
+                |-- 2cc80dabc69f58b6_0
+                |-- 2cc80dabc69f58b6_1
+                |-- 4cb013792b196a35_0
+                |-- 4cb013792b196a35_1
+                |-- index
+                |-- index-dir
+                    |-- the-real-index
+        |-- Session Storage
+            |-- 000003.log
+            |-- CURRENT
+            |-- LOCK
+            |-- LOG
+            |-- MANIFEST-000001
+        |-- Sessions
+            |-- Session_13422533287435360
+            |-- Tabs_13422533289964286
+        |-- Shared Dictionary
+            |-- db
+            |-- db-journal
+        |-- SharedStorage
+        |-- shared_proto_db
+            |-- 000003.log
+            |-- CURRENT
+            |-- LOCK
+            |-- LOG
+            |-- MANIFEST-000001
+            |-- metadata
+                |-- 000003.log
+                |-- CURRENT
+                |-- LOCK
+                |-- LOG
+                |-- MANIFEST-000001
+        |-- Site Characteristics Database
+            |-- 000003.log
+            |-- CURRENT
+            |-- LOCK
+            |-- LOG
+            |-- MANIFEST-000001
+        |-- Sync Data
+            |-- LevelDB
+                |-- 000003.log
+                |-- CURRENT
+                |-- LOCK
+                |-- LOG
+                |-- MANIFEST-000001
+        |-- Top Sites
+        |-- Top Sites-journal
+        |-- trusted_vault.pb
+        |-- Web Data
+        |-- Web Data-journal
+        |-- WebStorage
+            |-- QuotaManager
+            |-- QuotaManager-journal
+    |-- GraphiteDawnCache
+        |-- data_0
+        |-- data_1
+        |-- data_2
+        |-- data_3
+        |-- index
+    |-- GrShaderCache
+        |-- data_0
+        |-- data_1
+        |-- data_2
+        |-- data_3
+        |-- f_000001
+        |-- f_000002
+        |-- f_000003
+        |-- index
+    |-- Last Version
+    |-- Local State
+    |-- Safe Browsing
+    |-- segmentation_platform
+        |-- ukm_db
+        |-- ukm_db-wal
+    |-- ShaderCache
+        |-- data_0
+        |-- data_1
+        |-- data_2
+        |-- data_3
+        |-- index
+    |-- Variations
+|-- JSONFiles
+    |-- state.json
+|-- package-lock.json
+|-- package.json
+|-- playwright.config.js
+|-- setup
+    |-- login.js
+|-- test-results
+    |-- report.html
+|-- tests
+    |-- features
+        |-- example.js
+    |-- helpers
+        |-- auth
+            |-- authHook.js
+    |-- pages
+        |-- example.js
+    |-- steps
+        |-- example.js
