@@ -6,4 +6,5 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
-/JSONFIles/state.json
+JSONFiles/state.json
+filestructure.txt
