@@ -416,8 +416,7 @@
     |-- features
         |-- example.js
     |-- helpers
-        |-- auth
-            |-- authHook.js
+        |-- authHook.js
     |-- pages
         |-- example.js
     |-- steps
