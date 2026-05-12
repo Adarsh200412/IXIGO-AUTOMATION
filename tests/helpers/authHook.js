@@ -21,7 +21,7 @@ Before(async function () {
   this.context = await browser.newContext({
     storageState: path.resolve(__dirname, "../../JSONFiles/state.json"),
   });
-
+  await this.context.grantPermissions(['notifications'], { origin: "https://www.ixigo.com" });
   this.page = await this.context.newPage();
 });
 

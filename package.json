@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test":"npx cucumber-js tests/features",
-    "setup": "node setup/login.js"
+    "test": "npx cucumber-js tests/features",
+    "setup": "node setup/login.js",
+    "test:foodOrder": "npx cucumber-js tests/features/train/train_food_order.feature",
+    "test:searchByStation": "npx cucumber-js tests/features/train/search_by_station.feature",
+    "test:trainPlatformLocator": "npx cucumber-js tests/features/train/train_platform_locator_to_booking.feature",
+    "test:vandeBharat": "npx cucumber-js tests/features/train/Vande_Bharat_Booking.feature"
   },
   "keywords": [],
   "author": "",
