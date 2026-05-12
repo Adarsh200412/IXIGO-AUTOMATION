@@ -1,10 +1,8 @@
-
-# Playwright
 node_modules/
 /test-results/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
-/JSONFIles/state.json
-/package.json
+JSONFiles/state.json
+filestructure.txt
