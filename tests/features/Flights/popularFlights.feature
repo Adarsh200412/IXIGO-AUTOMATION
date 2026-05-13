@@ -1,6 +1,9 @@
 @popularFlights
 Feature: Popular Flights
 
+Background: Login
+Given User should be logged in
+
 Scenario: Checking Whether clicking on particular flight gives desired results
 Given User navigated to ixigoFlights
 When User clicks on <anyAirline> button
