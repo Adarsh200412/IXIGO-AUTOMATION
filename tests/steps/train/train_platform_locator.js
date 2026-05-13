@@ -37,6 +37,5 @@ When('proceed with payment process', async function () {
 })
 Then('payment page should visible successfully', async function () {
     await train_platform_locator.paymentpageload();
-    await this.page.screenshot({ path: "screenshot/Train_Ticket_Scenario3_payment_page.png" });
-    console.log("Tested is Completed successfully");
+    await this.page.screenshot({ path: 'screenshot/Train_Ticket_Sceanrio2_payment_page.png' });
 })

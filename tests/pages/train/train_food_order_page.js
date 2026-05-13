@@ -20,27 +20,13 @@ class OrderFood {
     async PnrTf(newpage, pnr) {
 
         this.pnr_Tf = newpage.locator("#pnr-input");
-
         await this.pnr_Tf.fill(pnr);
-
         await newpage.keyboard.press("Enter");
 
         this.errorMsg = await newpage.locator('[class="px-20 pb-20 pt-30 overflow-y-auto text-center no-scrollbar"]');
         await newpage.waitForTimeout(2000);
         if (await this.errorMsg.isVisible()) {
-            // Dynamically override the remaining methods so they do nothing and pass
-            const do_nothing = async () => { };
-            this.SelectHotels = do_nothing;
-            this.AddFilters = do_nothing;
-            this.AddProducts = do_nothing;
-            this.ProceedNext = do_nothing;
-            this.PassengerName = do_nothing;
-            this.ContactNo = do_nothing;
-            this.Paymentbutton = do_nothing;
-            // this.ProceedContinue = do_nothing;
-            this.OrderPageLoad = do_nothing;
-            await newpage.screenshot({ path: "screenshot/invalid_pnr.png" })
-            console.log(`You entered invalid PNR number:${pnr}\nSo Please enter the valid PNR number`)
+            await newpage.close()
         }
     }
     async SelectHotels(newpage) {
@@ -53,7 +39,7 @@ class OrderFood {
         this.filter_1 = newpage.locator(`(//div[@id="order-menu-filters"]/descendant::div[@class="flex-shrink-0"])[2]`);
         this.filter_2 = newpage.locator(`(//div[@id="order-menu-filters"]/descendant::div[@class="flex-shrink-0"])[3]`);
         await this.filter_1.click();
-        // await this.filter_2.click();
+        await this.filter_2.click();
     }
     async AddProducts(newpage) {
         this.product_1 = newpage.locator(`(//button[text()="Add"])[1]`);
@@ -74,32 +60,26 @@ class OrderFood {
         await newpage.waitForTimeout(1000);
         await this.contact_noTF.fill(contact);
     }
-    async Paymentbutton(newpage) {
-        this.payment_btn = newpage.getByRole('button', { name: 'Pay at Delivery' });
+    async PaymentMethod(newpage) {
+        this.payment_methodBtn = newpage.locator("#ZOOP_PG");
         await newpage.waitForTimeout(1000);
-        await this.payment_btn.click();
+        await this.payment_methodBtn.check();
     }
-    // async ProceedContinue(newpage) {
-    //     this.proceed_continue = newpage.locator(`._continue-button_hvjmv_1`);
-    //     await newpage.waitForTimeout(1000);
-    //     await this.proceed_continue.click();
-    // }
-    async OrderPageLoad(newpage) {
+    async ProceedContinue(newpage) {
+        this.proceed_continue = newpage.locator(`._continue-button_hvjmv_1`);
+        await newpage.waitForTimeout(1000);
+        await this.proceed_continue.click();
+    }
+    async PaymentPageLoad(newpage) {
         try {
-            this.assert = newpage.locator(`//h6[text()="Order Placed"]`);
+            this.assert = newpage.locator(`//article[text()="Complete your payment"]`);
             await newpage.waitForTimeout(5000);
-            await expect(this.assert).toContainText("Order Placed", { timeout: 15000 })
-            await newpage.waitForTimeout(5000);
-            this.delivery_date = await newpage.locator('//p[@class="body-lg font-medium"]').textContent();
-            console.log(`Your order will be delivered on ${this.delivery_date}`);
-            this.amount = await newpage.locator('(//p[@class="body-md font-medium"])[3]').textContent();
-            console.log(`Your order amount is ${this.amount}`);
-
-            await newpage.screenshot({ path: "screenshot/Food_order_payment_page.png" })
-            console.log("Order page is loaded successfully")
+            await expect(this.assert).toHaveText(/complete payment/)
+            await newpage.screenshot({ path: "screenshot/payment_page.png" })
+            console.log("Payment page is loaded")
         }
         catch (err) {
-            console.log("Order page is not loaded", err);
+            console.log("payment page is not loaded", err);
         }
     }
 }

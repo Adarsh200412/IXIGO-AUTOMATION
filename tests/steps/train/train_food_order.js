@@ -36,13 +36,13 @@ When("enter passengers name {string}", async function (name) {
 When("enter contact details {string}", async function (contact) {
     await order_food.ContactNo(newpage, contact);
 })
-When("select payment button", async function () {
-    await order_food.Paymentbutton(newpage)
+When("select payment method", async function () {
+    await order_food.PaymentMethod(newpage)
 })
-// When("click on continue button", async function () {
-//     await order_food.ProceedContinue(newpage)
-// })
-Then("order page should load successfull", async function () {
-    await order_food.OrderPageLoad(newpage);
+When("click on continue button", async function () {
+    await order_food.ProceedContinue(newpage)
+})
+Then("payment page should load successfull", async function () {
+    await order_food.PaymentPageLoad(newpage);
     console.log("Tested is completed successfully")
 })

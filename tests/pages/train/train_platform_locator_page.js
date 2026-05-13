@@ -31,9 +31,9 @@ class TrainPlatformLocator {
     }
     async Enter_Train_NameOrNumber_to_get_data(name_or_number) {
         await this.train_name_number.click();
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState('domcontentloaded');
         await this.train_name_number.fill(name_or_number);
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForTimeout(2000);
         await this.page.keyboard.press('Enter');
     }
     async click_platform_seach() {

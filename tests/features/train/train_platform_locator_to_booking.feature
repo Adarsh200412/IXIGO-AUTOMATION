@@ -1,6 +1,6 @@
 Feature: Train Platform Locator to Booking a ticket
 
-    Scenario: From Train Platform Locator to Booking a Ticket
+    Scenario Outline: From Train Platform Locator to Booking a Ticket
         Given load "https://www.ixigo.com/"
         When select train module in the dashboard
         And select train paltform locator option
@@ -16,4 +16,4 @@ Feature: Train Platform Locator to Booking a ticket
         Examples:
             | Train_name_or_number |
             | 20103                |
-            | 123456               |
+            | xyz123               |

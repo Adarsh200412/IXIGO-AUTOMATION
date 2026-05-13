@@ -1,16 +1,16 @@
-const { Given, When, Then } = require('@cucumber/cucumber');
-const { SearchByStation } = require('../../pages/train/search_by_station_page');
+const { Given, When, Then } = require("@cucumber/cucumber");
+const { SearchByStation } = require("../../pages/train/search_by_station_page");
 
 let search_by_station;
 
-Given("proceed to {string}", async function (url) {
+Given('proceed to {string}', async function (url) {
     search_by_station = new SearchByStation(this.page);
-    await search_by_station.navigatoApp(url)
-});
+    await search_by_station.navigatoApp(url);
+})
 When("select train option on dashboard", async function () {
     await search_by_station.TrainSection();
 })
-When('select search by station name section', async function () {
+When("select search by station name section", async function () {
     await search_by_station.SearchByStation();
 })
 When("enter staion name to get desired results {string}", async function (station_name) {
@@ -33,6 +33,5 @@ When("enter payment details", async function () {
 })
 Then("payment page should load successfully", async function () {
     await search_by_station.paymentpageload();
-    await this.page.screenshot({ path: "screenshot/Train_Ticket_Sceanrio2_payment_page.png" });
     console.log("Tested is Completed successfully");
 })

@@ -1,10 +1,10 @@
-Feature: Search a train by station name
+Feature: Search By Station
 
-    Scenario: Book a train by station name
+    Scenario Outline: Book a train by station name
         Given proceed to "https://www.ixigo.com/"
         When select train option on dashboard
         And select search by station name section
-        And enter staion name to get desired results "<Station_name_or_code>"
+        And enter staion name to get desired results "<Station_name>"
         And click search button
         And click Book button to buy tickets
         And check for available and book tickets
@@ -13,6 +13,7 @@ Feature: Search a train by station name
         Then payment page should load successfully
 
         Examples:
-            | Station_name_or_code |
-            | Surat                |
-            | GFD                  |
+            | Station_name |
+            | Surat        |
+            | xyz123       |
+
