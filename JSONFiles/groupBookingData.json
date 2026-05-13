@@ -1,0 +1,42 @@
+[
+  {
+    "origin": "Hyderabad",
+    "destination": "Delhi",
+    "departureDate": "May 17, 2026",
+    "passengers": "10"
+  },
+{
+    "destination": "Delhi",
+    "departureDate": "May 17, 2026",
+    "passengers": "10"
+  },
+  {
+    "origin": "Hyderabad",
+    "departureDate": "May 17, 2026",
+    "passengers": "10"
+  },
+  {
+    "origin": "Hyderabad",
+    "destination": "Delhi",
+    "passengers": "10"
+  }
+  ,{
+    "origin": "Hyderabad",
+    "destination": "Delhi",
+    "departureDate": "May 17, 2026",
+    "passengers": "11"
+  },
+  {
+    "origin": "Hyderabad",
+    "destination": "Delhi",
+    "departureDate": "May 17, 2026",
+    "passengers": "9"
+  },
+  {
+    "origin": "Hyderabad",
+    "destination": "Delhi",
+    "departureDate": "May 17, 2026",
+    "passengers": "s"
+  }
+
+]
