@@ -1,5 +1,6 @@
 Feature: Train Platform Locator to Booking a ticket
-
+    Background: Login
+        Given User should be logged in
     Scenario Outline: From Train Platform Locator to Booking a Ticket
         Given load "https://www.ixigo.com/"
         When select train module in the dashboard

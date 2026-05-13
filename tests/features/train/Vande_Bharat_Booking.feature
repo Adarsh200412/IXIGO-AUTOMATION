@@ -1,5 +1,6 @@
 Feature: Vande Bharat Booking
-
+  Background: Login
+    Given User should be logged in
   Scenario: Vande Bharat Booking
     Given start with "https://www.ixigo.com"
     When select train mode in dashboard

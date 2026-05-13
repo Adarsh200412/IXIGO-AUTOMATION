@@ -1,5 +1,7 @@
 Feature: Search By Station
 
+    Background: Login
+        Given User should be logged in
     Scenario Outline: Book a train by station name
         Given proceed to "https://www.ixigo.com/"
         When select train option on dashboard

@@ -1,5 +1,6 @@
 Feature: Train Food Order
-
+    Background: Login
+        Given User should be logged in
     Scenario: Order food on train
         Given navi to "https://www.ixigo.com/"
         When select train section on dashboard
