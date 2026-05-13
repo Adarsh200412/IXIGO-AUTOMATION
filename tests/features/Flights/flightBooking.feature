@@ -1,6 +1,9 @@
 @Booking 
 Feature: Flight Booking 
 
+Background: Login
+Given User should be logged in
+
 Scenario: Search and book a flight
 
 Given user launches ixigo website 

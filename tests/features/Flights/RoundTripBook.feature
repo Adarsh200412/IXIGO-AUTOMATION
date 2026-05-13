@@ -2,6 +2,9 @@
 
 Feature: Ixigo Flight Reservation Workflow
 
+Background: Login
+Given User should be logged in
+
 Scenario: User completes flight reservation journey
 
     Given user opens ixigo flights application
