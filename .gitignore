@@ -7,4 +7,8 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 JSONFiles/state.json
+JSONFiles/chromium.json
+JSONFiles/firefox.json
+JSONFiles/webkit.json
 filestructure.txt
+.env

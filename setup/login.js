@@ -1,31 +1,8 @@
-// const { chromium } = require("playwright");
-
-// (async () => {
-//   const browser = await chromium.launch({headless: false});
-//   const context = await browser.newContext();
-
-//   const page = await context.newPage();
-
-//   await page.goto("https://www.ixigo.com");
-
-
-//   await page.waitForTimeout(30000);
-//   page.reload();
-
-
-//   await context.storageState({path: "JSONFiles/state.json"});
-
-//   console.log("Authenticated session saved successfully");
-
-//   await context.close();
-//   await browser.close();
-// })();
-
 const { chromium, firefox, webkit } = require("@playwright/test");
 const fs = require("fs");
-require('dotenv').config();
+require("dotenv").config();
 
-(async () => {
+async function saveAuthenticatedSession() {
   const browserType = process.env.BROWSER || "chromium";
 
   let browserEngine;
@@ -45,10 +22,15 @@ require('dotenv').config();
   }
 
   const stateDir = "JSONFiles";
-  if (!fs.existsSync(stateDir)) fs.mkdirSync(stateDir);
+
+  if (!fs.existsSync(stateDir)) {
+    fs.mkdirSync(stateDir);
+  }
 
   const browser = await browserEngine.launch({ headless: false });
+
   const context = await browser.newContext();
+
   const page = await context.newPage();
 
   await page.goto("https://www.ixigo.com/");
@@ -58,9 +40,16 @@ require('dotenv').config();
   await page.waitForTimeout(60000);
 
   const outPath = `${stateDir}/${browserType}.json`;
-  await context.storageState({ path: outPath });
 
-  console.log(`Saved ${outPath}`);
+  await context.storageState({
+    path: outPath,
+  });
+
+  console.log(`Saved session to ${outPath}`);
 
   await browser.close();
-})();
+}
+
+saveAuthenticatedSession();
+
+module.exports = { saveAuthenticatedSession };
