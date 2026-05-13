@@ -1,56 +1,16 @@
-// const {
-//   setDefaultTimeout,
-//   BeforeAll,
-//   AfterAll,
-//   Before,
-//   After,
-// } = require("@cucumber/cucumber");
-
-// const { chromium } = require("@playwright/test");
-// const path = require("path");
-
-// setDefaultTimeout(30000);
-
-// let browser1;
-
-// BeforeAll(async function 
-  
-//   () {
-//   browser1 = await chromium.launch({ headless: false });
-// });
-
-// Before(async function () {
-//   this.context = await browser.newContext({
-//     storageState: path.resolve(__dirname, "../../JSONFiles/state.json"),
-//   });
-
-//   this.page = await this.context.newPage();
-// });
-
-// After(async function () {
-//   await this.context.close();
-// });
-
-// AfterAll(async function () {
-//   await browser.close();
-// });
-
 const {
   setDefaultTimeout,
   BeforeAll,
   AfterAll,
-  Before,
   After,
 } = require("@cucumber/cucumber");
 
-require('dotenv').config();
+require("dotenv").config();
 
 const { chromium, firefox, webkit } = require("@playwright/test");
-
 const fs = require("fs");
-const path = require("path");
 
-setDefaultTimeout(30000);
+setDefaultTimeout(60000);
 
 let browser;
 
@@ -59,48 +19,67 @@ BeforeAll(async function () {
 
   switch (browserType) {
     case "firefox":
-      browser = await firefox.launch({
-        headless: false,
-      });
+      browser = await firefox.launch({ headless: false });
       break;
 
     case "webkit":
-      browser = await webkit.launch({
-        headless: false,
-      });
+      browser = await webkit.launch({ headless: false });
       break;
 
     case "chromium":
     default:
-      browser = await chromium.launch({
-        headless: false,
-      });
+      browser = await chromium.launch({ headless: false });
   }
 
   console.log(`✓ Running tests on ${browserType}`);
 });
 
-Before(async function () {
-  const browserType = process.env.BROWSER || "chromium";
+After(async function ({ result }) {
+  let videoPath;
+  let screenshotPath;
 
-
-  const authFile = path.resolve(__dirname, `../../JSONFiles/${browserType}.json`);
-
-  if (fs.existsSync(authFile)) {
-    console.log(`Using saved session: ${authFile}`);
-    this.context = await browser.newContext({ storageState: authFile });
-  } else {
-    console.log(`No saved session for ${browserType}. Run the login script to generate JSONFiles/${browserType}.json`);
-    this.context = await browser.newContext();
+  if (this.page) {
+    const video = this.page.video();
+    if (video) {
+      videoPath = await video.path();
+    }
   }
 
-  this.page = await this.context.newPage();
-});
+  if (result?.status === "FAILED" && this.page) {
+    if (!fs.existsSync("screenshots")) {
+      fs.mkdirSync("screenshots");
+    }
 
-After(async function () {
-  await this.context.close();
+    screenshotPath = `screenshots/${Date.now()}.png`;
+    await this.page.screenshot({
+      path: screenshotPath,
+      fullPage: true,
+    });
+    
+    // Attach screenshot to Cucumber report
+    const screenshotData = fs.readFileSync(screenshotPath);
+    await this.attach(screenshotData, "image/png");
+  }
+
+  if (this.context) {
+    await this.context.close();
+  }
+
+  // Attach video to Cucumber report
+  if (videoPath && fs.existsSync(videoPath)) {
+    const videoData = fs.readFileSync(videoPath);
+    await this.attach(videoData, "video/webm");
+  }
 });
 
 AfterAll(async function () {
-  await browser.close();
+  if (browser) {
+    await browser.close();
+  }
 });
+
+function getBrowser() {
+  return browser;
+}
+
+module.exports = { getBrowser };

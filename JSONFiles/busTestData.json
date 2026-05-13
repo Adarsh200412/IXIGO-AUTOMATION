@@ -1,0 +1,31 @@
+{
+    "default_passenger": {
+        "passengerData": {
+            "email": "arushtripathi121@gmail.com",
+            "name": "Arush Tripathi",
+            "age": "25"
+        }
+    },
+    "valid_search": {
+        "source": "Delhi",
+        "destination": "Mumbai"
+    },
+    "invalid_search": {
+        "source": "Banglore",
+        "destination": "Banglore"
+    },
+    "invalid_email_passenger": {
+        "passengerData": {
+            "email": "invalid-email-format",
+            "name": "Arush",
+            "age": "25"
+        }
+    },
+    "blank_details_passenger": {
+        "passengerData": {
+            "email": "",
+            "name": "",
+            "age": ""
+        }
+    }
+}

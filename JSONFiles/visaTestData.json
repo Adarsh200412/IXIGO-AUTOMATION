@@ -1,0 +1,65 @@
+{
+    "positive_uae": {
+        "country": "UAE",
+        "startDate": "1 August 2026",
+        "endDate": "11 August 2026",
+        "photoPath": "C:/Users/arush/OneDrive/Pictures/20240315.jpg",
+        "expectSuccess": true
+    },
+    "positive_singapore": {
+        "country": "Singapore",
+        "startDate": "5 July 2026",
+        "endDate": "15 July 2026",
+        "photoPath": "C:/Users/arush/OneDrive/Pictures/20240315.jpg",
+        "expectSuccess": true
+    },
+    "positive_japan": {
+        "country": "Japan",
+        "startDate": "10 August 2026",
+        "endDate": "20 August 2026",
+        "photoPath": "C:/Users/arush/OneDrive/Pictures/20240315.jpg",
+        "expectSuccess": true
+    },
+    "positive_profile_edit": {
+        "profileData": {
+            "firstName": "Arush",
+            "lastName": "Tripathi",
+            "middleName": "Kumar",
+            "emailAddress": "arush@example.com",
+            "passPortNumber": "P1234567"
+        },
+        "expectSuccess": true
+    },
+    "negative_invalid_country": {
+        "country": "InvalidCountryName123",
+        "expectSuccess": false,
+        "errorType": "invalid_country"
+    },
+    "negative_blank_country": {
+        "country": "",
+        "expectSuccess": false,
+        "errorType": "invalid_country"
+    },
+    "negative_profile_missing_fields": {
+        "profileData": {
+            "firstName": "",
+            "lastName": "",
+            "middleName": "Kumar",
+            "emailAddress": "invalidemail",
+            "passPortNumber": ""
+        },
+        "expectSuccess": false,
+        "errorType": "invalid_profile"
+    },
+    "negative_profile_bad_email": {
+        "profileData": {
+            "firstName": "Arush",
+            "lastName": "Tripathi",
+            "middleName": "Kumar",
+            "emailAddress": "arush-at-example.com",
+            "passPortNumber": "P1234567"
+        },
+        "expectSuccess": false,
+        "errorType": "invalid_profile"
+    }
+}
