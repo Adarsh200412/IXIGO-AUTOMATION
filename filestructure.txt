@@ -1,23 +1,151 @@
+|-- .env
 |-- .github
     |-- workflows
         |-- playwright.yml
 |-- .gitignore
 |-- cucumber.json
 |-- JSONFiles
+    |-- busTestData.json
+    |-- chromium.json
     |-- state.json
+    |-- visaTestData.json
+    |-- webkit.json
 |-- package-lock.json
 |-- package.json
 |-- playwright.config.js
+|-- screenshots
+    |-- 1778599866996.png
+    |-- 1778599877826.png
+    |-- 1778599960407.png
+    |-- 1778599995570.png
+    |-- 1778600004823.png
+    |-- 1778600014092.png
+    |-- 1778600081463.png
+    |-- 1778600132253.png
+    |-- 1778600158122.png
+    |-- 1778600174086.png
+    |-- 1778600469391.png
+    |-- 1778600478144.png
+    |-- 1778600486743.png
+    |-- 1778600495279.png
+    |-- 1778600504272.png
+    |-- 1778600563708.png
+    |-- 1778600601104.png
+    |-- 1778602200134.png
+    |-- 1778602264163.png
+    |-- 1778636618516.png
+|-- scripts
 |-- setup
     |-- login.js
 |-- test-results
     |-- report.html
+    |-- report.json
+    |-- screenshots
+        |-- 1778569895417-Submit-passenger-details.png
+    |-- videos
+        |-- page@066b4e7201d068449c1bff4a89a1deb3.webm
+        |-- page@085e39598e5dd3181d077feb6a084dd8.webm
+        |-- page@0974504bddeb37878bf666edd455aa20.webm
+        |-- page@0994d7e1fb017d5cd636bc2c2ea73b21.webm
+        |-- page@09af5f27d018e0c22ec4d4b66ce92c3c.webm
+        |-- page@0ece58b763a070b40fb18e518106537a.webm
+        |-- page@10c3862dbb9d4f1c0c65a8038ef2042b.webm
+        |-- page@1387ff03c7212cf11bf6249a4810deb5.webm
+        |-- page@14d6cf4f2e8fc68c9370323336943d31.webm
+        |-- page@156319188cba5ee0dfa2f20cfcd3dd31.webm
+        |-- page@15e5fa7feccd9a6464e8297251984e95.webm
+        |-- page@193b052c7532cbfc27ca0d53fa43162e.webm
+        |-- page@1cc005574ef94ea4163bb79f9f6e4288.webm
+        |-- page@1e1f9f2baa0499ead2fd2e5c831994a5.webm
+        |-- page@20f25212c2165ca19f62f3dd32094031.webm
+        |-- page@2225ef3c6f27962cae8baca19c9e2d72.webm
+        |-- page@23ba9a56f02e79da8fffdd613f5ddd90.webm
+        |-- page@24ffc576679f8805e4ef5daa929aa66b.webm
+        |-- page@323035f9098c50928fba11f4940f1b2a.webm
+        |-- page@33b110cc77f2580fe31be3d07ddf5b56.webm
+        |-- page@3dabc0e20988d27ad72e32e5178f8e9f.webm
+        |-- page@4833b262311c94e98c826c85bf274c4e.webm
+        |-- page@49286b89902c77e0517aea63f026b203.webm
+        |-- page@4b7c9b1b9d02052826d6f16f95570ec0.webm
+        |-- page@4cad76f881290a353fd1f2739f92150c.webm
+        |-- page@4e97e1be0eb698aad29153621c3fc49c.webm
+        |-- page@542a2e3a207d38944669c7b67989a9bb.webm
+        |-- page@5480d5a5fbfe7666087985e0eeaf6490.webm
+        |-- page@572d9b5d0078a0f666c445f56455577d.webm
+        |-- page@57fab5b428ef1e949c229a0ea6fff878.webm
+        |-- page@5b284f27575bc2b0e470d879942e2ced.webm
+        |-- page@5ecaae074705b7025c57c3144278035f.webm
+        |-- page@73c730622761a617d25f3158bfa0c4bf.webm
+        |-- page@74536e5723a65acba1bdd1e063e9f93b.webm
+        |-- page@7d23637631dba0b5f3bc0016d444dc57.webm
+        |-- page@7f838fcf97a8c5837fe03b35536bef19.webm
+        |-- page@8c0e30f5fb565595acb852bf39429a7d.webm
+        |-- page@8cd2c6521741bf142653b69f4247717c.webm
+        |-- page@8f29991351eb5205654b1513bfbfeb09.webm
+        |-- page@8fde7efda7dc92a55d87b80e436f2f08.webm
+        |-- page@9807d66fd1f3c72d5086143da7f4a7d8.webm
+        |-- page@987298d703ad88aceb04a19d6f3d83e4.webm
+        |-- page@99441f678223298581b0a3cce4be6df9.webm
+        |-- page@995d6cb2bae88b613c299b14a78e01de.webm
+        |-- page@99defb8a72cc232f914e89b1956ab908.webm
+        |-- page@9aaaaf01a66b83364c45cca4a823c677.webm
+        |-- page@a49ceb7085010f2404c0c171ca94f5c3.webm
+        |-- page@a9160e253e7c05e39ad37e515b9e76cf.webm
+        |-- page@abf648f96c75f1965f3c7592762cc0a1.webm
+        |-- page@ae4e417fa8a89ba1ebf50a5b0d231e5e.webm
+        |-- page@b0a5775344e420391437f7879c316882.webm
+        |-- page@b89f20cd270a81bf685bc9811f2c480d.webm
+        |-- page@bb746ac52161198bf731c558bb74a389.webm
+        |-- page@bbdccb82de02f4cf5fb3dee79139462a.webm
+        |-- page@bf41e56263a65e80511e0ccce5c6d559.webm
+        |-- page@c1fa501d6607726abd597fddf4e92831.webm
+        |-- page@c448833f7e973052dc20ef8d5978a384.webm
+        |-- page@c51ab18cdc1aeca47a3a5f06f4f46e38.webm
+        |-- page@ca50b02fb788705b36f8be1fd8a3afea.webm
+        |-- page@cecb951033123ab24babfacb34fd566a.webm
+        |-- page@d0368b949a34fef432f324f183a8c736.webm
+        |-- page@d406ec6fcfdcd21594139b41bb48af48.webm
+        |-- page@d447f2a808adf351a1459b752dbd8b92.webm
+        |-- page@dc20a64d42bab57a74bae2bb96fb31a2.webm
+        |-- page@dd3338f2f3eb7b877bf8ddb62ca28e40.webm
+        |-- page@dd5f9121f0b8d0bdeaa801b122a3c912.webm
+        |-- page@de58758c110bb9abcfd7226c0375ab23.webm
+        |-- page@e0f6304cfef4bca7c145e961ef86c640.webm
+        |-- page@e4b1b8bac9fb092701a9b8bcbeac3a03.webm
+        |-- page@e6fe97d320b56071bb84476f35ce74c2.webm
+        |-- page@eae1b01d9ee1f0b55a8ca3c599f0e74c.webm
+        |-- page@eb34498f40eaaa23eb63aac40aff5bac.webm
+        |-- page@ee5d94046a6ed3c5947eea68a6f25b0f.webm
+        |-- page@f0e70b0ccfa79b2d109322ae37419b71.webm
+        |-- page@f139abcaab603bbd1c109f819425eeb2.webm
+        |-- page@f39052ac21f14d61d37e4e05a9bb418b.webm
+        |-- page@f592a300d4bd29cc213ffe9efd351afc.webm
+        |-- page@f6183dc61053a7e3b880d50384bb2eed.webm
+        |-- page@f8a80b2790498653e9eb63691c65b27d.webm
+        |-- page@fa695ce6f0ab4797b706d1328f0c2914.webm
+        |-- page@fc2ead1cb934fc7be89fd23e8ce02957.webm
+        |-- page@ff1e58fa44f35fddf0c1b7098f040a68.webm
 |-- tests
     |-- features
-        |-- example.feature
+        |-- busBooking
+            |-- bus.feature
+        |-- visaBooking
+            |-- visa.feature
     |-- helpers
         |-- authHook.js
     |-- pages
-        |-- example.js
+        |-- busBooking
+            |-- BusFilters.js
+            |-- BusSearch.js
+            |-- Payment.js
+        |-- visaBooking
+            |-- VisaDetailsPage.js
+            |-- VisaDurationSet.js
+            |-- VisaHomePage.js
     |-- steps
-        |-- example.js
+        |-- busBooking
+            |-- bus.js
+        |-- login
+            |-- login.js
+        |-- visaBooking
+            |-- visa.js

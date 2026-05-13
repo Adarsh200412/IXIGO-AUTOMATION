@@ -1,0 +1,39 @@
+[
+  {
+    "origin": "BLR",
+    "destination": "HYD",
+    "firstName": "Naman",
+    "age" : 25 ,
+    "date": "May 17, 2026",
+    "lastName": "M",
+    "email": "naman1@gmail.com",
+    "dob": "17/10/2004",
+    "address": "Delhi" ,
+    "typeOfFlight" : "Economy" ,
+    "student": "True"
+  },
+
+  {
+    "origin": "BLR",
+    "destination": "HYD",
+    "firstName": "Rahul",
+    "date": "May 17, 2026",
+    "lastName": "K",
+    "email": "rahul@gmail.com",
+    "dob": "12/05/2001",
+    "address": "Bangalore",
+    "typeOfFlight" : "Business"
+  },
+  {
+    "origin": "DEL",
+    "destination": "HYD",
+    "firstName": "Narendra",
+    "date": "May 17, 2026",
+    "lastName": "Modi",
+    "email": "rahul@gmail.com",
+    "dob": "12/05/1940",
+    "address": "Bangalore",
+    "typeOfFlight" : "Business",
+    "Senior Citizen" : "True"
+  }
+]
